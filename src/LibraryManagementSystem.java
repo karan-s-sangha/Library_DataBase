@@ -1,8 +1,7 @@
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 import java.sql.*;
 import java.text.SimpleDateFormat;
 
@@ -18,60 +17,6 @@ public class LibraryManagementSystem extends JFrame {
         initializeUI();
         connection = DatabaseConnection.connect();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     private void initializeUI() {
         setTitle("Library Management System");
@@ -185,70 +130,6 @@ public class LibraryManagementSystem extends JFrame {
             button.setBackground(buttonColor);
             return button;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     
     private void executeQuery1() {
@@ -473,10 +354,10 @@ public class LibraryManagementSystem extends JFrame {
                 StringBuilder resultText = new StringBuilder();
                 while (rs.next()) {
                     String title = rs.getString("Title");
-                    String borrowDate = rs.getString("BorrowDate"); // Assume it's stored in a compatible format
+                    String borrowDate = rs.getString("BorrowDate"); 
                     String returnDate = rs.getString("ReturnDate") != null ? rs.getString("ReturnDate") : "Not Returned";
     
-                    // If your database stores the full datetime and you only want to display the date part:
+                    // If database stores the full datetime and you only want to display the date part:
                     // It's safe to substring the ISO8601 datetime format to get just the date part.
                     borrowDate = borrowDate != null ? borrowDate.substring(0, 10) : "Unknown";
                     returnDate = !returnDate.equals("Not Returned") ? returnDate.substring(0, 10) : "Not Returned";
@@ -539,7 +420,7 @@ private void viewAccountHistory() {
             StringBuilder resultText = new StringBuilder();
             while (rs.next()) {
                 String title = rs.getString("Title");
-                // Assuming dates are stored as TEXT in the format "YYYY-MM-DD"
+                // dates are stored as TEXT in the format "YYYY-MM-DD"
                 String borrowDate = rs.getString("BorrowDate"); // Directly use the string representation
                 String returnDate = rs.getString("ReturnDate") != null ? rs.getString("ReturnDate") : "Not Returned"; // Check for null
                 resultText.append("Title: ").append(title).append(", Borrow Date: ").append(borrowDate).append(", Return Date: ").append(returnDate).append("\n");

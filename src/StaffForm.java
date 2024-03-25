@@ -103,7 +103,7 @@ public class StaffForm extends JFrame {
     }
 
     private void fetchLibraryBranches() {
-        // Assuming DatabaseConnection.connect() is a method that connects to your SQLite database
+        // DatabaseConnection.connect() is a method that connects to your SQLite database
         String sql = "SELECT BranchID, Name FROM LibraryBranch";
         try (Connection conn = DatabaseConnection.connect();
              PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -255,20 +255,6 @@ public class StaffForm extends JFrame {
         public String toString() {
             return name + " (ID: " + branchID + ")";
         }
-    }
-    
-    // Method to connect to the database
-    // This is a placeholder method. You should implement the connection logic based on your actual database setup.
-    private static Connection connect() {
-        // Connection string should be updated according to your database file path and other connection details
-        String url = "jdbc:sqlite:path_to_your_database_file.db";
-        Connection conn = null;
-        try {
-            conn = DriverManager.getConnection(url);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-        return conn;
     }
 }
 

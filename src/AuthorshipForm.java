@@ -170,7 +170,6 @@ public class AuthorshipForm extends JFrame {
     }
 
     private Authorship showUpdateDialog(Authorship authorship) {
-        // You can implement a custom dialog or input form to allow users to modify authorship details
         // For simplicity, let's use JOptionPane to input new AuthorID and ISBN
         JTextField authorIDField = new JTextField(String.valueOf(authorship.getAuthorID()));
         JTextField ISBNField = new JTextField(authorship.getISBN());

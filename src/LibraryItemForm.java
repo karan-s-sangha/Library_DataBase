@@ -64,7 +64,7 @@ public class LibraryItemForm extends JFrame {
     }
 
     private void fetchLibraryBranches() {
-        // Assume DatabaseConnection.connect() correctly establishes a database connection
+        // DatabaseConnection.connect() correctly establishes a database connection
         String sql = "SELECT BranchID, Name FROM LibraryBranch";
         branches = new Vector<>();
         try (Connection conn = DatabaseConnection.connect();
@@ -80,7 +80,6 @@ public class LibraryItemForm extends JFrame {
     }
 
     private void fetchItems() {
-        // Same connection assumption
         String sql = "SELECT ISBN, Title FROM Item";
         items = new Vector<>();
         try (Connection conn = DatabaseConnection.connect();
@@ -130,7 +129,7 @@ public class LibraryItemForm extends JFrame {
             return;
         }
 
-        // Assuming Branch ID and ISBN are in the first and third column respectively
+        // Branch ID and ISBN are in the first and third column respectively
         int branchID = (int) model.getValueAt(selectedRow, 0);
         String ISBN = (String) model.getValueAt(selectedRow, 2);
 
@@ -167,7 +166,6 @@ public class LibraryItemForm extends JFrame {
             return;
         }
 
-        // Assuming Branch ID and ISBN are in the first and third column respectively
         int branchID = (int) model.getValueAt(selectedRow, 0);
         String ISBN = (String) model.getValueAt(selectedRow, 2);
 

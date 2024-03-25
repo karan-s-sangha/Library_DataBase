@@ -3,7 +3,6 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.sql.*;
-import java.time.format.DateTimeFormatter;
 
 public class MaintenanceRecordForm extends JFrame {
     private JTable maintenanceRecordsTable;
@@ -103,7 +102,7 @@ public class MaintenanceRecordForm extends JFrame {
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, isbnField.getText());
-            pstmt.setString(2, dateField.getText()); // Assuming the date is entered in YYYY-MM-DD format
+            pstmt.setString(2, dateField.getText()); // the date is entered in YYYY-MM-DD format
             pstmt.setString(3, descriptionField.getText());
             pstmt.setString(4, actionTakenField.getText());
 
