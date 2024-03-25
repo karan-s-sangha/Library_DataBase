@@ -16,7 +16,7 @@ public class ItemForm extends JFrame {
     public ItemForm() {
         setTitle("Item Management");
         setSize(800, 500);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         initComponents();
         loadItems();
