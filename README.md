@@ -1,23 +1,3 @@
-## Getting Started
-
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-
-
 ## Library Management System Application 
 Overview
 The Library Management System is a comprehensive software application designed to automate the management tasks of a library. This Java-based application, utilizing Swing for its GUI, allows librarians and library staff to manage book inventories, user registrations, borrowings, returns, reservations, and user reviews efficiently. Moreover, it supports executing specific queries to retrieve data based on various criteria, such as finding high-rated mystery books or the most borrowed book of the month.
